@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_civilization">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_civilization"
         android:name="com.example.ageofempires.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_civilization"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_home_second">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_civilization" />
 
         <argument
             android:name="myArg"
@@ -30,14 +30,15 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_build"
         android:name="com.example.ageofempires.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="@string/menu_build"
+        tools:layout="@layout/fragment_build" >
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_flags"
         android:name="com.example.ageofempires.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_flags"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
