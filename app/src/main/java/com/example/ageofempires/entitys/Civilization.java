@@ -1,8 +1,10 @@
 package com.example.ageofempires.entitys;
 
 
+import java.io.Serializable;
+
 //Entidad de la BD
-public class Civilization {
+public class Civilization implements Serializable {
     private Integer id_Civi;
     private String name_Civi;
     private String arquitectura;
@@ -12,6 +14,9 @@ public class Civilization {
     private String maravilla;
     private String bonus;
     private String bonus_team;
+
+
+
 
     public Civilization(Integer id_Civi, String name_Civi, String arquitectura, String especialidad, String unidad_Unica, String tecnologias, String maravilla, String bonus, String bonus_team) {
         this.id_Civi = id_Civi;
@@ -24,6 +29,11 @@ public class Civilization {
         this.bonus = bonus;
         this.bonus_team = bonus_team;
     }
+
+    public Civilization(){
+
+    }
+
 
     public Integer getId_Civi() {
         return id_Civi;
@@ -96,7 +106,6 @@ public class Civilization {
     public void setBonus_team(String bonus_team) {
         this.bonus_team = bonus_team;
     }
-
 
 
 
