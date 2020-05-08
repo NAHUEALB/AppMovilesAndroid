@@ -1,4 +1,4 @@
-package com.example.ageofempires.ui.slideshow;
+package com.example.ageofempires.ui.flags;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.ageofempires.R;
 
-public class SlideshowFragment extends Fragment {
+public class FlagsFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private FlagsViewModel flagsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+        flagsViewModel =
+                ViewModelProviders.of(this).get(FlagsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
         final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        flagsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
