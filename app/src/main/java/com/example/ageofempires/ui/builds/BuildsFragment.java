@@ -28,11 +28,6 @@ import java.util.ArrayList;
 
 public class BuildsFragment extends Fragment {
 
-    ConnectionSQL connect;
-    ListView listViewCivi;
-    RecyclerView recycler;
-    ArrayList<String> listDatos;
-
     // private BuildsViewModel buildsViewModel;
     private Button btn_msj;
 
@@ -41,17 +36,6 @@ public class BuildsFragment extends Fragment {
         //Creo la vista que se le va a devolver al controlador
         View root = inflater.inflate(R.layout.fragment_build, container, false);
 
-        recycler = root.findViewById(R.id.recyclerdId);
-
-        recycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL,false));
-
-        listDatos = new ArrayList<String>();
-        for (int i=0 ; i <= 50 ; i++) {
-            listDatos.add("Dato: #" + i + "");
-        }
-
-        AdaptadorRecycler adapter = new AdaptadorRecycler(listDatos);
-        recycler.setAdapter(adapter);
 
 
         return root;

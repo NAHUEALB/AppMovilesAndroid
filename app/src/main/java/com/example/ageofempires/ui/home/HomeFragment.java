@@ -11,25 +11,35 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ageofempires.ConnectionSQL;
 import com.example.ageofempires.R;
+import com.example.ageofempires.Utilities.Utilities;
+import com.example.ageofempires.entitys.Civilization;
+
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+   // private HomeViewModel homeViewModel;
+    ArrayList<Civilization> listCivi;
+    RecyclerView recyclerViewCivi;
+
+    ConnectionSQL conn;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        conn = new ConnectionSQL(getContext(), Utilities.TABLA_CIVILIZATION, null, 1);
+
+        listCivi = new ArrayList<>();
+
+
         View root = inflater.inflate(R.layout.fragment_home, container,false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        recyclerViewCivi = root.findViewById(R.id.recyclerdId);
+
         return root;
     }
 }
