@@ -8,8 +8,7 @@
     <string name="action_settings">Settings</string>
 
 
-
-//Items del menu
+    //Items del menu
     <string name="menu_civilization">Civilizaciones</string>
     <string name="menu_build">Construcciones</string>
     <string name="menu_flags">Banderas</string>
@@ -17,9 +16,18 @@
     <string name="home_second">Home Second</string>
 
 
-//Bonus de civilizaciones
+    //Bonus de civilizaciones
     <string name="bizantinosb">Edificios tienen +10% (Alta Edad Media)/+20% (Ed.Feudal)/+30% (Ed. Castillos)/+40% (Ed. Imperial) Puntos de Resistencia</string>
     <string name="celtasb">Infanteria es 15% mas rapida / Leñadores trabajan 15% mas rapido / Armas de asedio disparan 20% mas rapido</string>
     <string name="chinosb">Comienzan con 3 aldeanos mas pero -150 alimento y -50 madera / Tecnologias cuestan -10% ~ -15% ~ -20%</string>
     <string name="francosb">Castillos cuestan -25% / mejoras de granja gratis / recoletores 25% mas rapido</string>
+    <string name="sarrasenosb">Mercados cuestan -75 madera / Tasa del Mercado cuesta 5% /Galera atacan 20% más rápido / Arqueros a caballo +3 ataque contra edificios</string>
+    <string name="persasb">Comienzan con +50 alimento, +50 madera / Centro urbano y muelle tienen doble de puntos.</string>
+    <string name="mongolesb">Arqueros a caballo disparan 20% más rápido,Caballería ligera y húsar +30% ptos. resistencia,Cazadores trabajan 50% más rápido</string>
+    <string name="godosb">Unidades de infanteria cuestan -35% a partir de la Edad Feudal,Infanteria +1 de ataque contra edificios,+10 población máxima en Edad Imperial</string>
+    <string name="inglesesb">Centros urbanos cuestan -50% de madera en Edad de los Castillos,Arqueros a pie tienen +1 de alcance en castillos y +1 en Imperial,Pastores trabajan 25% más rápido</string>
+    <string name="japonesesb">Campamento minero/maderero cuestan -50% / Infanteria ataca 25% más rápido a partir de Edad Feudal / Pesqueros doble puntos de resistencia/trabajan +5% en Edad Media/+10% en Feudal/+15% en Castillos,+20% en Imperial más rápido</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

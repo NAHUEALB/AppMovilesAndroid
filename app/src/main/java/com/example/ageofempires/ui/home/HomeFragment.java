@@ -60,7 +60,12 @@ public class HomeFragment extends Fragment {
         listCivilization.add(new Civilization("Celtas","Europa Occidental","Infanteria y armas de asedio","Invasor de pastos","Bastion y Furor Celta","Carraig Phadraig",R.string.celtasb,"Taller de maquinaria de asedio trabajan 20% mas rapido",R.drawable.celtas));
         listCivilization.add(new Civilization("Chinos","Asia Oriental","Arqueros","Chu ko nu","Gran Muralla y Coheteria","Templo del Cielo",R.string.chinosb,"Granjas +45 alimento",R.drawable.chinos));
         listCivilization.add(new Civilization("Francos","Europa Occidental","Caballeria","Lanzador de hachas","Codigo caballeresco y Hacha de arista","Catedral de San Vito",R.string.francosb,"Jinetes +2 de vision.",R.drawable.francos));
-
+        listCivilization.add(new Civilization("Sarracenos","Medio Oriente","Camellos y naval","Mameluco","Madraza,Fanatismo","Gran Mezquita de Samarra",R.string.sarrasenosb,"Arqueros a pie +1 (Feudal)/+2 (Castillos)/+3 (Imperial) de ataque contra edificios.",R.drawable.sarracenos));
+        listCivilization.add(new Civilization("Persas","Medio Oriente","Caballeria","Elefante de guerra","Barbacana,Cornacas","Taq-i-Kisra",R.string.persasb,"Jinetes +2 ataque contra arqueros.",R.drawable.persas));
+        listCivilization.add(new Civilization("Mongoles","Asia Oriental","Arqueros a caballo","Mangudia","Nómadas,Instrucción Militar","Tienda de Gengis Khan",R.string.mongolesb,"Caballería de exploración +2 LDV.",R.drawable.mongoles));
+        listCivilization.add(new Civilization("Godos","Europa Central","Infanteria","Huscarle","Anarquia,Movilizacion","Mausoleo de Teodorico",R.string.godosb,"Cuarteles cuestan 20% más rapido",R.drawable.godos));
+        listCivilization.add(new Civilization("Ingleses","Europa Occidental","Arqueros","Arquero de tipo largo","Voluntarios de caballeria,Warwof","Catedral de Asquigrán,Catedral de Chichester",R.string.inglesesb,"Galerias de tiro con arco funcionan 20% más rapido",R.drawable.ingleses));
+        // listCivilization.add(new Civilization("Japoneses","Asia Oriental","Infanteria","Samurai","Yasama,Kataparuto","Todai-ji","Molino", R.string.japonesesb ,"Galeras +50% en línea de visión",R.drawable.japoneses));
 
     }
 }

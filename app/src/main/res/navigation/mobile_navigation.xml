@@ -41,4 +41,7 @@
         android:name="com.example.ageofempires.ui.flags.FlagsFragment"
         android:label="@string/menu_flags"
         tools:layout="@layout/fragment_slideshow" />
+
+
+
 </navigation>
