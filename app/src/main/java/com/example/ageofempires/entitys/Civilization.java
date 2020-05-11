@@ -5,21 +5,24 @@ import java.io.Serializable;
 
 //Entidad de la BD
 public class Civilization implements Serializable {
-    private Integer id_Civi;
     private String name_Civi;
     private String arquitectura;
     private String especialidad;
     private String unidad_Unica;
     private String tecnologias;
     private String maravilla;
-    private String bonus;
+    private int bonus;
     private String bonus_team;
+    private int img;
+
+    //Les pongo INT porque voy a redirigir a un recurso de la carpeta RES, bonus va a estar en Strings y la img en Drawable
 
 
+    public Civilization() {
+    }
 
 
-    public Civilization(Integer id_Civi, String name_Civi, String arquitectura, String especialidad, String unidad_Unica, String tecnologias, String maravilla, String bonus, String bonus_team) {
-        this.id_Civi = id_Civi;
+    public Civilization(String name_Civi, String arquitectura, String especialidad, String unidad_Unica, String tecnologias, String maravilla, int bonus, String bonus_team, int img) {
         this.name_Civi = name_Civi;
         this.arquitectura = arquitectura;
         this.especialidad = especialidad;
@@ -28,19 +31,7 @@ public class Civilization implements Serializable {
         this.maravilla = maravilla;
         this.bonus = bonus;
         this.bonus_team = bonus_team;
-    }
-
-    public Civilization(){
-
-    }
-
-
-    public Integer getId_Civi() {
-        return id_Civi;
-    }
-
-    public void setId_Civi(Integer id_Civi) {
-        this.id_Civi = id_Civi;
+        this.img = img;
     }
 
     public String getName_Civi() {
@@ -91,11 +82,11 @@ public class Civilization implements Serializable {
         this.maravilla = maravilla;
     }
 
-    public String getBonus() {
+    public int getBonus() {
         return bonus;
     }
 
-    public void setBonus(String bonus) {
+    public void setBonus(int bonus) {
         this.bonus = bonus;
     }
 
@@ -106,6 +97,16 @@ public class Civilization implements Serializable {
     public void setBonus_team(String bonus_team) {
         this.bonus_team = bonus_team;
     }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
+    }
+
+
 
 
 

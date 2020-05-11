@@ -42,6 +42,7 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Vi
         holder.maravilla.setText(listCivilization.get(position).getMaravilla());
         holder.bonus.setText(listCivilization.get(position).getBonus());
         holder.bonusT.setText(listCivilization.get(position).getBonus_team());
+        holder.img.setImageResource(listCivilization.get(position).getImg());
 
     }
 
@@ -52,7 +53,7 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Vi
 
     public class ViewHolderDatos extends RecyclerView.ViewHolder {
         TextView name,arqui,espec,unidad,tec,maravilla,bonus,bonusT;
-        ImageView foto;
+        ImageView img;
 
         public ViewHolderDatos(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +66,8 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Vi
             maravilla = itemView.findViewById(R.id.maravillaCivilization);
             bonus = itemView.findViewById(R.id.bonusCivilization);
             bonusT = itemView.findViewById(R.id.bonusTCivilization);
+            img = itemView.findViewById(R.id.img_Civi);
+
 
         }
 

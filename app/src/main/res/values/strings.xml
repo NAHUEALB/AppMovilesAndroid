@@ -15,4 +15,11 @@
     <string name="menu_flags">Banderas</string>
 
     <string name="home_second">Home Second</string>
+
+
+//Bonus de civilizaciones
+    <string name="bizantinosb">Edificios tienen +10% (Alta Edad Media)/+20% (Ed.Feudal)/+30% (Ed. Castillos)/+40% (Ed. Imperial) Puntos de Resistencia</string>
+    <string name="celtasb">Infanteria es 15% mas rapida / Leñadores trabajan 15% mas rapido / Armas de asedio disparan 20% mas rapido</string>
+    <string name="chinosb">Comienzan con 3 aldeanos mas pero -150 alimento y -50 madera / Tecnologias cuestan -10% ~ -15% ~ -20%</string>
+    <string name="francosb">Castillos cuestan -25% / mejoras de granja gratis / recoletores 25% mas rapido</string>
 </resources>
