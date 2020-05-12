@@ -23,8 +23,6 @@
     <string name="chinosb">Comienzan con 3 aldeanos mas pero -150 alimento y -50 madera / Tecnologias cuestan -10% ~ -15% ~ -20%</string>
     <string name="francosb">Castillos cuestan -25% / mejoras de granja gratis / recoletores 25% mas rapido</string>
     <string name="sarrasenosb">Mercados cuestan -75 madera / Tasa del Mercado cuesta 5% /Galera atacan 20% más rápido / Arqueros a caballo +3 ataque contra edificios</string>
-    <string name="persasb">Comienzan con +50 alimento, +50 madera / Centro urbano y muelle tienen doble de puntos.</string>
-    <string name="mongolesb">Arqueros a caballo disparan 20% más rápido,Caballería ligera y húsar +30% ptos. resistencia,Cazadores trabajan 50% más rápido</string>
     <string name="godosb">Unidades de infanteria cuestan -35% a partir de la Edad Feudal,Infanteria +1 de ataque contra edificios,+10 población máxima en Edad Imperial</string>
     <string name="inglesesb">Centros urbanos cuestan -50% de madera en Edad de los Castillos,Arqueros a pie tienen +1 de alcance en castillos y +1 en Imperial,Pastores trabajan 25% más rápido</string>
     <string name="japonesesb">Molino, Campamento minero/maderero cuestan -50% / Infanteria ataca 25% más rápido a partir de Edad Feudal / Pesqueros doble puntos de resistencia/trabajan +5% en Edad Media/+10% en Feudal/+15% en Castillos,+20% en Imperial más rápido</string>
@@ -35,7 +33,26 @@
     <string name="coreanosb">Las fortificaciones son construidas un 33% más rápido,Canteros trabajan 20% más rápido,Mejoras de torres gratis,Torres +1 en Castillos,+2 en Imperial al alcance,Unidades militares cuestan -15% madera</string>
     <string name="cumanosb">Puede construir centro urbano desde la edad Feudal,Taller de asedio y ariete disponible desde Feudal,Caballería se mueve 10% más rápido desde Feudal</string>
     <string name="eslavosb">Granjeros trabajan 15% más rápidos,Rastreo gratis,Las unidades del taller de asedios cuestan -15%</string>
-
+    <string name="etiopesb">Arqueros disparan 15% más rápidos,Reciben +100 alimento y +100 de oro cuando avanzan de edad,Mejora a piquero gratis</string>
+    <string name="españolesb">Mejores en herrería no cuestan oro,Galeones artillados se benefician de balística,Artilleros manuales y cañones de asedio disparan 15% más rápido</string>
+    <string name="hunosb">No necesitan casas pero comienza con -100 madera,Arqueros a caballo cuestan -10% en Castillos y -20% en Imperial,Lanzapiedras son 30$ más rápidos</string>
+    <string name="incasb">Aldeanos se benefician de las mejoras de infantería en la herrería,Casas albergan 10 de población,Edificios cuestan -15% piedra</string>
+    <string name="indiosb">Aldeanos cuestan -10% en Edad Media/-15% en Feudal/-20% en Castillos/-25% en Imperial,Pescadores trabajan 15% más rápido y recogen +15 de alimento,Camellos +1 de armadura antiproyectil</string>
+    <string name="italianosb">Tecnologías en el muelle cuestan -50%,Pesquero cuesta -20%,Avanzar de edad cuesta -15%</string>
+    <string name="jemeresb">Los edificios no son requeridos para avanzar de edad,Los aldeanos pueden guardarse en las casas,Elefante de combate se mueven 15% más rápido</string>
+    <string name="lituanosb">Comienzan con +150 de alimento,Lanceros y guerrilleros se mueven 10% más rápido,La caballería obtiene +1 ataque por cada reliquia guardada</string>
+    <string name="magiaresb">Forja, fundición de hierro y alto horno gratis,Caballería de exploración cuesta -15%,Aldeanos matan animales salvajes de un golpe</string>
+    <string name="malayosb">Avanzar de edad es 80% más rápido,Trampa para peces cuesan -33% y proveen alimentos ilimitados,Elefante de combate cuesta -30%</string>
+    <string name="maliesb">Edificios cuestan +15% madera,Unidades de cuartel tienen +1 en Feudal/+2 en Castillos/+3 en Imperial de armadura anti proyectil</string>
+    <string name="mayasb">Comienzan con un aldeano más pero con -50 de alimento,Recursas duran 15% más,Arqueros cuestan -10%/-20% en Castillos/-30% en Imperial</string>
+    <string name="portuguesesb">Unidades cuestan -15% oro,Barcos tienen +10 resistencia,Factoría disponible en Edad Imperial</string>
+    <string name="tartarosb">Las unidades hacen +50% de daño por elevación,Obtienen gratis la mejora de Táctica de los partos</string>
+    <string name="teutonesb">Centros urbanos guardan +10 unidades,Torres guardan el doble de unidades,Monjes sanan 2 veces mas lejos,Granjas cuestan -33%</string>
+    <string name="turcosb">Unidades de pólvora +25% puntos de resistencia y tecnologías de polvora cuestan +50%,Química gratis,Mineros de oro trabajan 20% más rápido,Mejoras de caballería ligera y húsar gratis</string>
+    <string name="vietnamitasb">Posiciones enemigas reveladas desde el inicio de partida,Unidades de la galeria de tiro con arco tienen +20% de resistencia,Leva gratis</string>
+    <string name="vikingosb">Barcos de guerra cuestan -10% en feudal/-15% en Castiillos/-20% en Imperial,Carretilla y carro de manos gratis</string>
+    <string name="mongolesb">Arqueros a caballo disparan 20% más rápido,Caballería ligera y húsar +30% puntos,Cazadores trabajan 50% más rápido</string>
+    <string name="persasb">Comienzan con +50 de alimento y +50 de madera,Centro urbano y muelle tienen el doble de puntos de resistencia y funcionan 10% en Feudal/15% en Castillos y 20% en Imperial más rápidos</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
