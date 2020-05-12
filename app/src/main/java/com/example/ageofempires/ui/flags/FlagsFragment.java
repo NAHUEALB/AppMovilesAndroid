@@ -5,31 +5,54 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ageofempires.Adapter.AdaptadorRecycler;
+import com.example.ageofempires.Adapter.AdaptadorRecyclerFlags;
+import com.example.ageofempires.MainActivity;
 import com.example.ageofempires.R;
+import com.example.ageofempires.entitys.Civilization;
+
+import java.util.ArrayList;
 
 public class FlagsFragment extends Fragment {
 
-    private FlagsViewModel flagsViewModel;
+    ArrayList<Civilization> listCivilization;
+
+    RecyclerView recyclerCivi;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        flagsViewModel =
-                ViewModelProviders.of(this).get(FlagsViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        flagsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        listCivilization = MainActivity.listCivilization;
+        recyclerCivi = root.findViewById(R.id.recyclerd_flagsId);
+        recyclerCivi.setLayoutManager(new GridLayoutManager(getContext(),4));
+        AdaptadorRecyclerFlags adapter = new AdaptadorRecyclerFlags(listCivilization);
+
+        adapter.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "PERTENECE A: "+ listCivilization.get(recyclerCivi.getChildAdapterPosition(v)).getArquitectura(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        recyclerCivi.setAdapter(adapter);
+
+
+
         return root;
     }
+
+
+
 }

@@ -27,7 +27,15 @@
     <string name="mongolesb">Arqueros a caballo disparan 20% más rápido,Caballería ligera y húsar +30% ptos. resistencia,Cazadores trabajan 50% más rápido</string>
     <string name="godosb">Unidades de infanteria cuestan -35% a partir de la Edad Feudal,Infanteria +1 de ataque contra edificios,+10 población máxima en Edad Imperial</string>
     <string name="inglesesb">Centros urbanos cuestan -50% de madera en Edad de los Castillos,Arqueros a pie tienen +1 de alcance en castillos y +1 en Imperial,Pastores trabajan 25% más rápido</string>
-    <string name="japonesesb">Campamento minero/maderero cuestan -50% / Infanteria ataca 25% más rápido a partir de Edad Feudal / Pesqueros doble puntos de resistencia/trabajan +5% en Edad Media/+10% en Feudal/+15% en Castillos,+20% en Imperial más rápido</string>
+    <string name="japonesesb">Molino, Campamento minero/maderero cuestan -50% / Infanteria ataca 25% más rápido a partir de Edad Feudal / Pesqueros doble puntos de resistencia/trabajan +5% en Edad Media/+10% en Feudal/+15% en Castillos,+20% en Imperial más rápido</string>
+    <string name="aztecasb">Comienzan con +50 de oro,Aldeanos cargan +5 recursos,Unidades militares son creadas 15% más rápido,Monjes obtienen +5 de resistencia por cada tecnología desarrollada en el monasterio</string>
+    <string name="bereberesb">Aldeanos y barcos se mueven 10% más rápido,Cabellería cuesta -15% en Castillos y -20% en Imperial</string>
+    <string name="birmanosb">Las tecnologías del campamento maderero son gratis,Infantería tiene +1 en feudal/+2 en Castillos y +3 en Imperial de ataque,Las tecnologías del monasterio cuestan +50%</string>
+    <string name="bulgarosb">La línea de milicia se mejora gratis,Los centros urbanos cuestan -50% piedra,Pueden constuir Kreposts(Fortalezas)</string>
+    <string name="coreanosb">Las fortificaciones son construidas un 33% más rápido,Canteros trabajan 20% más rápido,Mejoras de torres gratis,Torres +1 en Castillos,+2 en Imperial al alcance,Unidades militares cuestan -15% madera</string>
+    <string name="cumanosb">Puede construir centro urbano desde la edad Feudal,Taller de asedio y ariete disponible desde Feudal,Caballería se mueve 10% más rápido desde Feudal</string>
+    <string name="eslavosb">Granjeros trabajan 15% más rápidos,Rastreo gratis,Las unidades del taller de asedios cuestan -15%</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
