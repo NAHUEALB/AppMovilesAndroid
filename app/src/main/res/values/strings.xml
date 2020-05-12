@@ -9,8 +9,9 @@
 
 
     //Items del menu
+    <string name="menu_home">Home</string>
     <string name="menu_civilization">Civilizaciones</string>
-    <string name="menu_build">Construcciones</string>
+    <string name="menu_build">INFORMACION EXTRA</string>
     <string name="menu_flags">Banderas</string>
 
     <string name="home_second">Home Second</string>
