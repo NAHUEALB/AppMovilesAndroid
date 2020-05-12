@@ -33,10 +33,7 @@ public class BuildsFragment extends Fragment {
 
         webView = root.findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://google.com/");
 
-
-        /*
         btn_age1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +41,7 @@ public class BuildsFragment extends Fragment {
                 webView.loadUrl("https://ageofempires.fandom.com/es/wiki/Age_of_Empires");
             }
         });
-*/
+
 
         return root;
     }
