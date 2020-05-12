@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Aztecas","Nuevo Mundo","Infanteria y monjes","Guerrero jaguar","Atlati,Guerras florales","Templo Mayor",R.string.aztecasb,"Reliquias generan +33 oro", R.drawable.aztecas));
 
-        listCivilization.add(new Civilization("Bereberes","Medio oriente","Camellos y barcos","Camello arquero","Alcazabas,Dromedarios magrebíes","Torre Hasán",R.string.bereberesb,"Escaramuzador Zenete disponible en Galeria de tiro con arco desde la edad de Castillos",R.drawable.bereberes));
+        listCivilization.add(new Civilization("Bereberes","Medio oriente","Camellos y barcos","Camello arquero","Alcazabas,Dromedarios magrebíes","Torre Hasán",R.string.bereberesb,"Escaramuzador Zenete disponible en Galeria de tiro con arco desde la edad de Castillos",R.drawable.berberes));
 
-        listCivilization.add(new Civilization("Birmanos","Sudeste Asiático","Monjes y elefantes","Arambai","Howdah,Caballería manipur","Pagoda de Shwezigon",R.string.birmanosb,"Las reliquias son visibles desde el inicio de la partida", R.drawable.birmanosb));
+        listCivilization.add(new Civilization("Birmanos","Sudeste Asiático","Monjes y elefantes","Arambai","Howdah,Caballería manipur","Pagoda de Shwezigon",R.string.birmanosb,"Las reliquias son visibles desde el inicio de la partida", R.drawable.birmanos));
 
         listCivilization.add(new Civilization("Bizantinos","Mediterranea","Defensa","Catafracta","Fuego Griego,Logistica","Hagia_Sophia",R.string.bizantinosb,"Monjes sanan 50% más rapidos.",R.drawable.bizantinos));
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Etíopes","Africana","Arqueros y armas de asedio","Shotelai","Centralización,Mecanismos de Torsión","Biet Medhani Alem",R.string.etiopesb,"Torres y puestos avanzados +3 línea de visión",R.drawable.etiopes));
 
-        listCivilization.add(new Civilization("Españoles","Mediterránea","Monjes y pólvora","Conquistador,Misionera","Inquisición,Supremacia","Torre del oro",R.string.españolesb,"Unidades comerciales generan 25% oro",R.drawable.españoles));
+        listCivilization.add(new Civilization("Españoles","Mediterránea","Monjes y pólvora","Conquistador,Misionera","Inquisición,Supremacia","Torre del oro",R.string.españolesb,"Unidades comerciales generan 25% oro",R.drawable.espanioles));
 
         listCivilization.add(new Civilization("Godos","Europa Central","Infanteria","Huscarle","Anarquia,Movilizacion","Mausoleo de Teodorico",R.string.godosb,"Cuarteles cuestan 20% más rapido",R.drawable.godos));
 
@@ -129,13 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Vikingos","Europa Central","Infantería y naval","Berserker,Barco Dragón","Hérsires,Trance Frenético","Iglesia de madera Borgound",R.string.vikingosb,"Muellen cuestan -15%",R.drawable.vikingos));
 
-        listCivilization.add(new Civilization("Mongoles","Asia Oriental","Arqueros a caballo","Mangudai","Nomadas,Instrucción militar",R.string.mongolesb,"Caballeria de exploracion +2 línea de visión",R.drawable.mongoles));
+        listCivilization.add(new Civilization("Mongoles","Asia Oriental","Arqueros a caballo","Mangudai","Nomadas,Instrucción militar","Tienda de Gengis Khan", R.string.mongolesb,"Caballeria de exploracion +2 línea de visión",R.drawable.mongoles));
 
-        listCivilization.add(new Civilization("Persas","Medio Oriente","Elefante de guerra","barbacana,Cornacas","Taq-i Kisra",R.string.persasb,"Jinetes +2 ataque contra arqueros",R.drawable.persas));
+        listCivilization.add(new Civilization("Persas","Medio Oriente","Caballeria","Elefante de Guerra","barbacana,Cornacas","Taq-i Kisra",R.string.persasb,"Jinetes +2 ataque contra arqueros",R.drawable.persas));
 
     }
-
-
 
 
     @Override
