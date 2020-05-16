@@ -1,5 +1,6 @@
 package com.example.ageofempires.ui.webview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.example.ageofempires.Navegador;
 import com.example.ageofempires.R;
 
 public class WebViewFragment extends Fragment {
@@ -30,17 +32,59 @@ public class WebViewFragment extends Fragment {
 
 
 
-        webView = root.findViewById(R.id.webView);
-        webView.setWebViewClient(new WebViewClient());
-
         btn_age1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String URL = "https://ageofempires.fandom.com/es/wiki/Age_of_Empires";
+                //Creo la nueva activity
+                Intent web = new Intent(getContext(), Navegador.class);
+                //Creo el objeto que le voy a mandar
+                Bundle b = new Bundle();
+                //Le meto datos a ese obj
+                b.putString("URL", URL );
+                //Le inyecto a esa activity el nuevo objeto
+                web.putExtras(b);
+                //Inicio la nueva actividad
+                startActivity(web);
 
-                webView.loadUrl("https://ageofempires.fandom.com/es/wiki/Age_of_Empires");
             }
         });
 
+        btn_ageMitology.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String URL = "https://ageofempires.fandom.com/es/wiki/Age_of_Mythology";
+                //Creo la nueva activity
+                Intent web = new Intent(getContext(), Navegador.class);
+                //Creo el objeto que le voy a mandar
+                Bundle b = new Bundle();
+                //Le meto datos a ese obj
+                b.putString("URL", URL );
+                //Le inyecto a esa activity el nuevo objeto
+                web.putExtras(b);
+                //Inicio la nueva actividad
+                startActivity(web);
+
+            }
+        });
+
+        btn_age3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String URL = "https://ageofempires.fandom.com/es/wiki/Age_of_Empires_III";
+                //Creo la nueva activity
+                Intent web = new Intent(getContext(), Navegador.class);
+                //Creo el objeto que le voy a mandar
+                Bundle b = new Bundle();
+                //Le meto datos a ese obj
+                b.putString("URL", URL );
+                //Le inyecto a esa activity el nuevo objeto
+                web.putExtras(b);
+                //Inicio la nueva actividad
+                startActivity(web);
+
+            }
+        });
 
         return root;
     }

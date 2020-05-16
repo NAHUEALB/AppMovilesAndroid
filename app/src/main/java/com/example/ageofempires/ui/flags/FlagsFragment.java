@@ -30,7 +30,7 @@ public class FlagsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_flags, container, false);
         listCivilization = MainActivity.listCivilization;
         recyclerCivi = root.findViewById(R.id.recyclerd_flagsId);
-        recyclerCivi.setLayoutManager(new GridLayoutManager(getContext(),4));
+        recyclerCivi.setLayoutManager(new GridLayoutManager(getContext(),3));
         AdaptadorRecyclerFlags adapter = new AdaptadorRecyclerFlags(listCivilization);
 
         adapter.setOnClickListener(new View.OnClickListener() {

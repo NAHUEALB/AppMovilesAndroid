@@ -64,11 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadCivilizations() {
 
-        listCivilization.add(new Civilization("Bizantinos","Mediterranea","Defensa","Catafracta","Fuego Griego,Logistica","Hagia_Sophia",R.string.bizantinosb,"Monjes sanan 50% más rapidos.",R.drawable.bizantinos));
-        listCivilization.add(new Civilization("Celtas","Europa Occidental","Infanteria y armas de asedio","Invasor de pastos","Bastion y Furor Celta","Carraig Phadraig",R.string.celtasb,"Taller de maquinaria de asedio trabajan 20% mas rapido",R.drawable.celtas));
-        listCivilization.add(new Civilization("Chinos","Asia Oriental","Arqueros","Chu ko nu","Gran Muralla y Coheteria","Templo del Cielo",R.string.chinosb,"Granjas +45 alimento",R.drawable.chinos));
-        listCivilization.add(new Civilization("Francos","Europa Occidental","Caballeria","Lanzador de hachas","Codigo caballeresco y Hacha de arista","Catedral de San Vito",R.string.francosb,"Jinetes +2 de vision.",R.drawable.francos));
-
         listCivilization.add(new Civilization("Aztecas","Nuevo Mundo","Infanteria y monjes","Guerrero jaguar","Atlati,Guerras florales","Templo Mayor",R.string.aztecasb,"Reliquias generan +33 oro", R.drawable.aztecas));
 
         listCivilization.add(new Civilization("Bereberes","Medio oriente","Camellos y barcos","Camello arquero","Alcazabas,Dromedarios magrebíes","Torre Hasán",R.string.bereberesb,"Escaramuzador Zenete disponible en Galeria de tiro con arco desde la edad de Castillos",R.drawable.berberes));
@@ -79,9 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Búlgaros","Europa del este","Infantería","Konnik","Estribos,Nobles Bagain","Iglesia redonda",R.string.bulgarosb,"La herrería trabaja 50% más rápido", R.drawable.bulgaros));
 
+        listCivilization.add(new Civilization("Celtas","Europa Occidental","Infanteria y armas de asedio","Invasor de pastos","Bastion y Furor Celta","Carraig Phadraig",R.string.celtasb,"Taller de maquinaria de asedio trabajan 20% mas rapido",R.drawable.celtas));
+
+        listCivilization.add(new Civilization("Chinos","Asia Oriental","Arqueros","Chu ko nu","Gran Muralla y Coheteria","Templo del Cielo",R.string.chinosb,"Granjas +45 alimento",R.drawable.chinos));
+
         listCivilization.add(new Civilization("Coreanos","Asia Oriental","Defensa y naval","Carreta de guerra,Barco tortuga","Panokseon,Shinkichon","Hwangnyongsa",R.string.coreanosb,"Alcance minimo de mangoneles reducido",R.drawable.coreanos));
 
         listCivilization.add(new Civilization("Cumanos","Asia occidental","Caballería","Kipchak","Ganadería de la estepa,Mercenario cumano","Sarkel",R.string.cumanosb,"Empalizadas tienen +50% de puntos de resistencia",R.drawable.cumanos));
+
+        listCivilization.add(new Civilization("Francos","Europa Occidental","Caballeria","Lanzador de hachas","Codigo caballeresco y Hacha de arista","Catedral de San Vito",R.string.francosb,"Jinetes +2 de vision.",R.drawable.francos));
 
         listCivilization.add(new Civilization("Eslavos","Europa del este","Infantería y armas de asedio","Boyardo","Ortodoxia,Druzhina","Iglesia de la transformación",R.string.eslavosb,"Edificios militares(excepto castillos y muelles) albergan +5 de población", R.drawable.eslavos));
 
@@ -115,7 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Mayas","Nuevo Mundo","Arqueros","Arquero de plumas","Saeta de Obsidiana,El dorado","Templo del gran jaguar",R.string.mayasb,"Empalizadas,murallas,portones y puertan cuestan -50%",R.drawable.mayas));
 
+        listCivilization.add(new Civilization("Mongoles","Asia Oriental","Arqueros a caballo","Mangudai","Nomadas,Instrucción militar","Tienda de Gengis Khan", R.string.mongolesb,"Caballeria de exploracion +2 línea de visión",R.drawable.mongoles));
+
         listCivilization.add(new Civilization("Portugueses","Mediterránea","Barcos y unidades de pólvora","Cañon de salvas,Carabela","Carracas,Arcabuz","Torre de Belem",R.string.portuguesesb,"Cartografía gratis desde Edad Media",R.drawable.portugueses));
+
+        listCivilization.add(new Civilization("Persas","Medio Oriente","Caballeria","Elefante de Guerra","barbacana,Cornacas","Taq-i Kisra",R.string.persasb,"Jinetes +2 ataque contra arqueros",R.drawable.persas));
 
         listCivilization.add(new Civilization("Sarracenos","Medio Oriente","Camellos y naval","Mameluco","Madraza,Fanatismo","Gran Mezquito de Samarra",R.string.sarrasenosb,"Arqueros a pie +1 en Feudal/ +2 en Castillos/ +3 en Imperial de ataque contra edificios",R.drawable.sarracenos));
 
@@ -128,11 +133,6 @@ public class MainActivity extends AppCompatActivity {
         listCivilization.add(new Civilization("Vietnamitas","Asia oriental","Arqueros","Arquero de Ratan","Chatras,Papel moneda","Templo But Thap",R.string.vietnamitasb,"Guerrillero imperial disponible en la galería de tiro con arco",R.drawable.vietnamitas));
 
         listCivilization.add(new Civilization("Vikingos","Europa Central","Infantería y naval","Berserker,Barco Dragón","Hérsires,Trance Frenético","Iglesia de madera Borgound",R.string.vikingosb,"Muellen cuestan -15%",R.drawable.vikingos));
-
-        listCivilization.add(new Civilization("Mongoles","Asia Oriental","Arqueros a caballo","Mangudai","Nomadas,Instrucción militar","Tienda de Gengis Khan", R.string.mongolesb,"Caballeria de exploracion +2 línea de visión",R.drawable.mongoles));
-
-        listCivilization.add(new Civilization("Persas","Medio Oriente","Caballeria","Elefante de Guerra","barbacana,Cornacas","Taq-i Kisra",R.string.persasb,"Jinetes +2 ataque contra arqueros",R.drawable.persas));
-
     }
 
 
