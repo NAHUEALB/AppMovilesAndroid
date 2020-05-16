@@ -18,7 +18,6 @@ import com.example.ageofempires.R;
 public class WebViewFragment extends Fragment {
 
     // private BuildsViewModel buildsViewModel;
-    private WebView webView;
     private Button btn_age1, btn_ageMitology, btn_age3;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

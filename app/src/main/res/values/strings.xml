@@ -54,6 +54,10 @@
     <string name="mongolesb">Arqueros a caballo disparan 20% más rápido,Caballería ligera y húsar +30% puntos,Cazadores trabajan 50% más rápido</string>
     <string name="persasb">Comienzan con +50 de alimento y +50 de madera,Centro urbano y muelle tienen el doble de puntos de resistencia y funcionan 10% en Feudal/15% en Castillos y 20% en Imperial más rápidos</string>
 
+
+    <string name="text_info">Para mas informacion podes consultar los siguientes links</string>
+    <string name="btn_enlace1"> Age of empires 1</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
