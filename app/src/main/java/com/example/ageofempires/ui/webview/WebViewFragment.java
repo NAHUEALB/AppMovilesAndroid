@@ -1,7 +1,6 @@
-package com.example.ageofempires.ui.builds;
+package com.example.ageofempires.ui.webview;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.ageofempires.R;
 
-public class BuildsFragment extends Fragment {
+public class WebViewFragment extends Fragment {
 
     // private BuildsViewModel buildsViewModel;
     private WebView webView;
@@ -23,7 +22,7 @@ public class BuildsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         //Creo la vista que se le va a devolver al controlador
-        View root = inflater.inflate(R.layout.fragment_build, container, false);
+        View root = inflater.inflate(R.layout.fragment_webview, container, false);
 
         btn_age1 = root.findViewById(R.id.btn_age1);
         btn_ageMitology = root.findViewById(R.id.btn_ageMytho);

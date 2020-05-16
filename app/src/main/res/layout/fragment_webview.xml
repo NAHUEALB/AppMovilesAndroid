@@ -4,31 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.builds.BuildsFragment"
+    tools:context=".ui.webview.WebViewFragment"
     android:orientation="vertical">
+
+
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_age1"
+        android:layout_gravity="center">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="age1"
+            android:text="Para mas informacion podes consultar los siguientes links"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/btn_age1"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:text="Age1"
 
             />
         <Button
             android:id="@+id/btn_ageMytho"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="age1"
 
             />
         <Button
             android:id="@+id/btn_age3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="age1"
 
@@ -38,7 +57,7 @@
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="679dp" />
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>

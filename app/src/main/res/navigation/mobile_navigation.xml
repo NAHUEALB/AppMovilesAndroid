@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_civilization"
-        android:name="com.example.ageofempires.ui.home.HomeFragment"
+        android:name="com.example.ageofempires.ui.civilization.CivilizationFragment"
         android:label="@string/menu_civilization"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_civilization">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.example.ageofempires.ui.home.HomeSecondFragment"
+        android:name="com.example.ageofempires.ui.civilization.HomeSecondFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_home_second">
         <action
@@ -31,16 +31,16 @@
 
     <fragment
         android:id="@+id/nav_build"
-        android:name="com.example.ageofempires.ui.builds.BuildsFragment"
+        android:name="com.example.ageofempires.ui.webview.WebViewFragment"
         android:label="@string/menu_build"
-        tools:layout="@layout/fragment_build" >
+        tools:layout="@layout/fragment_webview" >
     </fragment>
 
     <fragment
         android:id="@+id/nav_flags"
         android:name="com.example.ageofempires.ui.flags.FlagsFragment"
         android:label="@string/menu_flags"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_flags" />
 
     <fragment
         android:id="@+id/nav_init"

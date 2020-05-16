@@ -1,4 +1,4 @@
-package com.example.ageofempires.ui.home;
+package com.example.ageofempires.ui.civilization;
 
 import com.example.ageofempires.*;
 
@@ -20,7 +20,7 @@ import com.example.ageofempires.entitys.Civilization;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class CivilizationFragment extends Fragment {
 
    // private HomeViewModel homeViewModel;
    ArrayList<Civilization> listCivilization;
@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_home, container,false);
+        View root = inflater.inflate(R.layout.fragment_civilization, container,false);
 
         listCivilization = MainActivity.listCivilization;
 
