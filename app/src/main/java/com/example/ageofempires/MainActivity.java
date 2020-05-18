@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         loadCivilizations();
-        if (listCivilization.isEmpty()){
+    /*      if (listCivilization.isEmpty()){
             Log.i("LISTA", "La Lista no se cargo");
         }
         else {
             Toast.makeText(this, "Se cargaron: "+ listCivilization.size()+" Civilizaciones", Toast.LENGTH_LONG ).show();
         }
-
+    */
 
 
 
