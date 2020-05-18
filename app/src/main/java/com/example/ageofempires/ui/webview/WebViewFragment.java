@@ -29,8 +29,6 @@ public class WebViewFragment extends Fragment {
         btn_ageMitology = root.findViewById(R.id.btn_ageMytho);
         btn_age3 = root.findViewById(R.id.btn_age3);
 
-
-
         btn_age1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

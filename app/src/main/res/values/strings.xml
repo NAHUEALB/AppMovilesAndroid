@@ -1,18 +1,24 @@
 <resources>
-    <string name="app_name">AgeOfEmpires</string>
+    <string name="app_name">App of Empires</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ayuda</string>
 
+
+    //Home
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="home_p1">En App of Empires encontrarás información valiosa sobre Age of empires II: Definitive Edition. Te ayudará a mejorar tus habilidades y convertirte en un gran jugador.</string>
+    <string name="home_p2">Visita el menú para conocer civilizaciones o buscar información sobre otros títulos</string>
+    <string name="home_header">Imagen</string>
 
     //Items del menu
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Inicio</string>
     <string name="menu_civilization">Civilizaciones</string>
-    <string name="menu_build">INFORMACION EXTRA</string>
     <string name="menu_flags">Banderas</string>
+    <string name="menu_build">Otros títulos</string>
 
     <string name="home_second">Home Second</string>
 
@@ -55,8 +61,10 @@
     <string name="persasb">Comienzan con +50 de alimento y +50 de madera,Centro urbano y muelle tienen el doble de puntos de resistencia y funcionan 10% en Feudal/15% en Castillos y 20% en Imperial más rápidos</string>
 
 
-    <string name="text_info">Para mas informacion podes consultar los siguientes links</string>
-    <string name="btn_enlace1"> Age of empires 1</string>
+    <string name="text_info">Estos pergaminos contienen información sobre otros títulos</string>
+    <string name="btn_enlace1">Age of Empires I</string>
+    <string name="btn_enlace2">Age of Mythology</string>
+    <string name="btn_enlace3">Age of Empires III</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
