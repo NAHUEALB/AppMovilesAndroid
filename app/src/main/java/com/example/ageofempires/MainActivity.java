@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static ArrayList<Civilization> listCivilization;
-    public Switch civswitch3;
+    public static Switch civswitch3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

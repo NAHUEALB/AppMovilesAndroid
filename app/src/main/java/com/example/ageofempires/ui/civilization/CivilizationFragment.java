@@ -66,10 +66,6 @@ public class CivilizationFragment extends Fragment {
 
         Log.i("CF", "onCreateView 2");
 
-
-
-        Log.i("CF", "onCreateView 3");
-
         recyclerCivi = root.findViewById(R.id.recyclermu);
         recyclerCivi.setLayoutManager(new LinearLayoutManager(getContext()));
         AdaptadorRecyclerMultiple adapter = new AdaptadorRecyclerMultiple(listCivilization);
