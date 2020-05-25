@@ -15,10 +15,10 @@ import com.example.ageofempires.entitys.Civilization;
 
 import java.util.ArrayList;
 
-public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.ViewHolderDatos> {
+public class AdaptadorRecyclerMultiple extends RecyclerView.Adapter<AdaptadorRecyclerMultiple.ViewHolderDatos> {
     ArrayList<Civilization> listCivilization;
 
-    public AdaptadorRecycler(ArrayList<Civilization> listCivilization) {
+    public AdaptadorRecyclerMultiple(ArrayList<Civilization> listCivilization) {
         this.listCivilization = listCivilization;
     }
 

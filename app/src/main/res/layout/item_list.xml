@@ -4,12 +4,10 @@
     android:layout_height="match_parent">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="212dp"
         android:orientation="horizontal">
-
 
 
         <ImageView
@@ -22,21 +20,24 @@
             android:src="@mipmap/ic_launcher" />
 
         //Layout general
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-                //Contenido
-                <TextView
-                    android:id="@+id/nameCivilization"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+            //Contenido
+
+            <TextView
+                android:id="@+id/nameCivilization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             //Layout horizontal para el label + informacion
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,10 +48,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:text="Arquitectura: "
+                    android:text="@string/civ_arq"
                     android:textStyle="bold" />
 
                 //Informacion
+
                 <TextView
                     android:id="@+id/arquiCivilization"
                     android:layout_width="wrap_content"
@@ -65,16 +67,19 @@
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Especialidad: "
-                    android:textStyle="bold"/>
+                    android:text="@string/civ_esp"
+                    android:textStyle="bold" />
                 //Informacion
+
                 <TextView
                     android:id="@+id/especCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -85,17 +90,19 @@
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Unidad unica: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
                 //Info
+
                 <TextView
                     android:id="@+id/unidadCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="arqui"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -105,16 +112,18 @@
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tecnologia: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tecCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="probandoTecnologia"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -124,15 +133,18 @@
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maravilla: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/maravillaCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -142,34 +154,49 @@
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bonus: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/bonusCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 //Label
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bonus de Equipo: "
-                    android:textStyle="bold"/>
-                    <TextView
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/bonusTCivilization"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/app_name"
                     android:textSize="15sp" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/civ_bot"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -178,8 +205,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="11dp"
 
-        android:layout_marginTop="11dp" />
+        android:background="@color/colorPrimary" />
 
 </LinearLayout>
