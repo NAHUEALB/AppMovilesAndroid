@@ -1,9 +1,11 @@
 package com.example.ageofempires.Adapter;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,11 +17,13 @@ import com.example.ageofempires.entitys.Civilization;
 
 import java.util.ArrayList;
 
-public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.ViewHolderDatos> {
+public class AdaptadorRecyclerMultiple extends RecyclerView.Adapter<AdaptadorRecyclerMultiple.ViewHolderDatos> {
     ArrayList<Civilization> listCivilization;
+    String rta;
 
-    public AdaptadorRecycler(ArrayList<Civilization> listCivilization) {
+    public AdaptadorRecyclerMultiple(ArrayList<Civilization> listCivilization, String rta) {
         this.listCivilization = listCivilization;
+        this.rta = rta;
     }
 
     @NonNull
@@ -35,16 +39,18 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Vi
     public void onBindViewHolder(@NonNull ViewHolderDatos holder, int position) {
 
 
-        holder.name.setText(listCivilization.get(position).getName_Civi());
-        holder.arqui.setText(listCivilization.get(position).getArquitectura());
-        holder.espec.setText(listCivilization.get(position).getEspecialidad());
-        holder.unidad.setText(listCivilization.get(position).getUnidad_Unica());
-        holder.tec.setText(listCivilization.get(position).getTecnologias());
-        holder.maravilla.setText(listCivilization.get(position).getMaravilla());
-        holder.bonus.setText(listCivilization.get(position).getBonus());
-        holder.bonusT.setText(listCivilization.get(position).getBonus_team());
-        holder.img.setImageResource(listCivilization.get(position).getImg());
-
+//        if (listCivilization.get(position).getEspecialidad() == "%Infanteria%")
+        if (rta == null) {
+            holder.name.setText(listCivilization.get(position).getName_Civi());
+            holder.arqui.setText(listCivilization.get(position).getArquitectura());
+            holder.espec.setText(listCivilization.get(position).getEspecialidad());
+            holder.unidad.setText(listCivilization.get(position).getUnidad_Unica());
+            holder.tec.setText(listCivilization.get(position).getTecnologias());
+            holder.maravilla.setText(listCivilization.get(position).getMaravilla());
+            holder.bonus.setText(listCivilization.get(position).getBonus());
+            holder.bonusT.setText(listCivilization.get(position).getBonus_team());
+            holder.img.setImageResource(listCivilization.get(position).getImg());
+        }
     }
 
     @Override

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@color/colorPrimary">
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:checked="true"
+            android:fontFamily="@font/cardinal"
+            android:showText="false"
+            android:text="@string/cl_buscar"
+            android:textSize="28sp" />
+
+
+
+        <LinearLayout
+        android:id="@+id/buttonslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:visibility="visible">
+            <RadioGroup
+                android:id="@+id/rg_rta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="bottom">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b1"
+                    android:textSize="20sp"
+                    android:checked="true"
+                    android:onClick="readaptar"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b3"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b5"
+                    android:textSize="20sp" />
+
+
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b2"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b4"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cardinal"
+                    android:text="@string/cl_b6"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+   </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclermu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

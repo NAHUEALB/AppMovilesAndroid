@@ -22,6 +22,21 @@
 
     <string name="home_second">Home Second</string>
 
+    <string name="civ_arq">Arquitectura:</string>
+    <string name="civ_esp">Especialidad:</string>
+    <string name="civ_bot">Calcular ejército</string>
+
+    <string name="cl_buscar">Buscar todas las civilizaciones</string>
+
+    <string name="cl_b1">Infantería</string>
+    <string name="cl_b2">Caballería</string>
+    <string name="cl_b3">Arqueros</string>
+    <string name="cl_b4">Pólvora</string>
+    <string name="cl_b5">Barcos</string>
+    <string name="cl_b6">Monjes</string>
+
+
+
 
     //Bonus de civilizaciones
     <string name="bizantinosb">Edificios tienen +10% (Alta Edad Media)/+20% (Ed.Feudal)/+30% (Ed. Castillos)/+40% (Ed. Imperial) Puntos de Resistencia</string>
