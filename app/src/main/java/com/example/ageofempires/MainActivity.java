@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         listCivilization.add(new Civilization("Aztecas","Nuevo Mundo","Infanteria y monjes","Guerrero jaguar","Atlati,Guerras florales","Templo Mayor",R.string.aztecasb,"Reliquias generan +33 oro", R.drawable.aztecas));
 
+
         listCivilization.add(new Civilization("Bereberes","Medio oriente","Camellos y barcos","Camello arquero","Alcazabas,Dromedarios magrebíes","Torre Hasán",R.string.bereberesb,"Escaramuzador Zenete disponible en Galeria de tiro con arco desde la edad de Castillos",R.drawable.berberes));
 
         listCivilization.add(new Civilization("Birmanos","Sudeste Asiático","Monjes y elefantes","Arambai","Howdah,Caballería manipur","Pagoda de Shwezigon",R.string.birmanosb,"Las reliquias son visibles desde el inicio de la partida", R.drawable.birmanos));

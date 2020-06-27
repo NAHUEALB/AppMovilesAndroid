@@ -108,42 +108,7 @@
         android:text="0"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comida_text"
-        android:nextFocusRight="@id/piedra_num"/>
-
-    <!-- PIEDRA -->
-    <TextView
-        android:id="@+id/piedra_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="40dp"
-        android:text="PIEDRA"
-        android:textSize="30dp"
-        app:layout_constraintStart_toEndOf="@+id/comida_img"
-        app:layout_constraintTop_toBottomOf="@+id/oro_num"
-        />
-
-    <EditText
-        android:id="@+id/piedra_num"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/comida_num"
-        app:layout_constraintTop_toBottomOf="@+id/piedra_text"/>
-
-    <ImageView
-        android:id="@+id/piedra_img"
-        android:layout_width="29dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="96dp"
-        android:src="@drawable/recurso_madera"
-        app:layout_constraintStart_toEndOf="@+id/piedra_text"
-        app:layout_constraintTop_toBottomOf="@+id/oro_img" />
+        app:layout_constraintTop_toBottomOf="@+id/comida_text"/>
 
 
     <TextView
