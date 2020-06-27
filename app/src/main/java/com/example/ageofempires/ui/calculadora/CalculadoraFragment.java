@@ -35,8 +35,6 @@ public class CalculadoraFragment  extends Fragment {
 
         maderaET = root.findViewById(R.id.madera_num);
 
-
-
         btn_calcu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +44,9 @@ public class CalculadoraFragment  extends Fragment {
 
                 mostrarDialogoBasico(numC,numO ,numM );
                 //Toast.makeText(getContext(), "El valor ingresado es "+ numM+", "+numC+", "+numO, Toast.LENGTH_LONG).show();
+                //Brillo
+
+
                 Vibrator vibrator = (Vibrator)getContext().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(1000);
             }

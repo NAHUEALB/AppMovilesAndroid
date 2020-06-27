@@ -43,8 +43,8 @@
     <fragment
         android:id="@+id/nav_calculadora"
         android:name="com.example.ageofempires.ui.calculadora.CalculadoraFragment"
-        android:label="Age of Empires"
-        tools:layout="@layout/fragment_init" >
+        android:label="Calculadora"
+        tools:layout="@layout/fragment_calculadora" >
     </fragment>
 
 
