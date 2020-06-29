@@ -54,10 +54,36 @@ public class CalculadoraFragment  extends Fragment {
                 Integer numO = Integer.parseInt(oroET.getText().toString());
                 Integer numM = Integer.parseInt(maderaET.getText().toString());
 
-                mostrarDialogoBasico(numC,numO ,numM );
-                //Toast.makeText(getContext(), "El valor ingresado es "+ numM+", "+numC+", "+numO, Toast.LENGTH_LONG).show();
                 //Brillo
 
+                // valores constantes para una unidad unica generica
+                int uuc=30; int uuo=40; int uum=25; int uud=5;
+
+                float[][] matriz = inicializarSimplex(numC, numO, numM, uuc, uuo, uum, uud);
+                int[] vars = inicializarVariables(3);
+                imprimirSimplex(matriz, vars);
+                matriz = calcularSimplex(matriz, vars);
+
+                int[] ejercito = inicializarVariables(4);
+                String mensaje = "Ejército óptimo: ";
+                for (int i=0; i<=2; i++) {
+                    if (vars[i] != 0) {
+                        ejercito[vars[i]] = String.format("%.0f", Math.ceil(matriz[i][7]));
+
+                        System.out.println("[" + i + "," + vars[i] + "] = " + matriz[i][vars[i]-1]);
+                        mensaje += String.format("%.0f", Math.ceil(matriz[i][7]));
+                        switch(vars[i]) {
+                            case 1: mensaje += " espadachines, "; break;
+                            case 2: mensaje += " arqueros, "; break;
+                            case 3: mensaje += " jinetes, "; break;
+                            case 4: mensaje += " unidades únicas, "; break;
+                        }
+                    }
+                }
+                mensaje = mensaje.substring(0, mensaje.length() - 2);
+                System.out.println(mensaje);
+
+                mostrarDialogo(ejercito[0], ejercito[1], ejercito[2], ejercito[3]);
 
                 Vibrator vibrator = (Vibrator)getContext().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(1000);
@@ -67,10 +93,128 @@ public class CalculadoraFragment  extends Fragment {
         return root;
     }
 
+    public static float determinante(float aii, float ajj, float aij, float aji) {
+        float result = (aii * ajj) - (aij * aji);
+        return result;
+      }
+       
+      public static float[][] inicializarSimplex(int comida, int oro, int madera, int uuc, int uuo, int uum, int uud) {
+        float[][] newArr = new float[4][9];
+        // carga de espadachin, arquero y jinete (X1, X2, X3)
+        newArr[0][0]=60; newArr[1][0]=20; newArr[2][0]=0; newArr[3][0]=-6;
+        newArr[0][1]=0; newArr[1][1]=45; newArr[2][1]=25; newArr[3][1]=-4;
+        newArr[0][2]=60; newArr[1][2]=75; newArr[2][2]=0; newArr[3][2]=-10;
+        
+        // carga de la unidad unica (X4)
+        newArr[0][3]=uuc; newArr[1][3]=uuo; newArr[2][3]=uum; newArr[3][3]=-uud;
+             
+        // carga de las variables slack (S1, S2, S3)
+        for (int j=4; j<=6; j++) {
+          for (int i=0; i<=3; i++) {
+            if (i == (j-4)) { newArr[i][j] = 1; } 
+            else { newArr[i][j] = 0; }
+          }
+        }
+             
+        // carga del termino independiente B y THETA
+        newArr[0][7]=comida; newArr[1][7]=oro; newArr[2][7]=madera; newArr[3][7]=0;
+        for (int i=0; i<=3; i++) { newArr[i][8] = 0; }
+           
+        return newArr;
+      }
+      
+      public static int[] inicializarVariables(int n) {
+        int[] vars = new int[3];
+        for (int i=0; i<n; i++) {
+          vars[i] = 0;
+        }
+        return vars;
+      }
+      
+      public static void imprimirSimplex(float[][] spx, int[] vars) {
+        for (int i=0; i<=3; i++) {
+          String renglon = "";
+          for (int j=0; j<=7; j++) {
+            //renglon += String.valueOf(spx[i][j]) + ", ";
+            renglon += String.format("%.0f", spx[i][j]) + " | ";
+          }
+          System.out.println(renglon);
+        }
+        System.out.println("Variables X: [ "+vars[0]+" - "+vars[1]+" - "+vars[2]+" ]");
+        System.out.println("            -----");
+      }
 
+      public static float[][] calcularSimplex(float[][] spx, int[] vars) {
+        boolean hayZNegativo = false;
+        for (int j=0; j<=3; j++) {
+          if (spx[3][j] < 0) { 
+            hayZNegativo = true; 
+          }
+        }
+        
+        if (hayZNegativo) {
+          // si aún queda un negativo se sigue resolviendo
+          float minValue = 0; // solo consideramos los negativos
+          int colPivot = -1; // será la columna pivot
+          // buscamos el mínimo Z (columna pivot)
+          for (int j=0; j<=3; j++) { 
+            if (spx[3][j] < minValue) {
+              colPivot = j;
+              minValue = spx[3][j];
+            }
+          }
+          
+          boolean hayThetaValido = false;
+          minValue = 999999;
+          int filaPivot = -1;
+          // buscamos el minimo THETA (fila pivot)
+          for (int i=0; i<=2; i++) { 
+            spx[i][8] = spx[i][7] / spx[i][colPivot]; 
+            if (spx[i][8] > 0) {
+              hayThetaValido = true;
+              if (spx[i][8] < minValue) {
+                filaPivot = i;
+                minValue = spx[i][8];
+              }
+            }
+          }
+          
+          if (filaPivot != -1) {
+            float[][] aux = new float[4][9]; // matriz nueva
+            // si hubo fila pivot entonces se sigue el desarrollo 
+            float pivot = spx[filaPivot][colPivot]; 
+            for (int i=0; i<=3; i++) {
+              for (int j=0; j<=7; j++) {
+                if (i != filaPivot) {
+                  // en cualquier fila se calcula como determinante / pivot
+                  aux[i][j] = determinante(pivot, spx[i][j], spx[i][colPivot], spx[filaPivot][j]) / pivot;
+                }
+                else {
+                  // si estamos en la misma fila solo dividimos por el pivot
+                  aux[i][j] = spx[i][j] / pivot;
+                }
+              }
+              aux[i][8] = 0; // inicializo en cero la columna de los THETA  
+            }
+            
+            vars[filaPivot] = colPivot + 1;
+            
+            imprimirSimplex(aux, vars);
+            spx = calcularSimplex(aux, vars);
+          } 
+          else {
+            System.out.println("Fin del procesamiento, no hay theta válido");
+          }
+        } 
+        else {
+          // si no hay más negativos se termina la recursión
+          System.out.println("Fin del procesamiento, no hay Z negativo");
+        }
+        return spx;
+      }
 
     //Boton OK y Share - Dialog Creado
-    private void mostrarDialogoBasico( int numc, int numO, int numM) {
+    private void mostrarDialogo(int cantInf, int cantArq, int cantCab, int cantUU) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_personalizado, null);
@@ -81,12 +225,14 @@ public class CalculadoraFragment  extends Fragment {
         final AlertDialog dialog = builder.create();
         dialog.show();
 
+        TextView txtInf= view.findViewById(R.id.cantInfanteria);
+        txtInf.setText(cantInf);
         TextView txtArq= view.findViewById(R.id.cantArqueros);
-        txtArq.setText("400");
-        TextView txtAld= view.findViewById(R.id.cantAldeanos);
-        txtAld.setText("50");
+        txtArq.setText(cantArq);
         TextView txtJin= view.findViewById(R.id.cantJinetes);
-        txtJin.setText("100");
+        txtJin.setText(cantCab);
+        //TextView txtUU= view.findViewById(R.id.cantUnidadUnica);
+        //txtUU.setText(cantUU);
 
         Button btnOk = view.findViewById(R.id.btn_ok);
         btnOk.setOnClickListener(new View.OnClickListener() {
