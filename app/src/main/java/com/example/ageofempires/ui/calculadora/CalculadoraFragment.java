@@ -10,12 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.ageofempires.R;
+
+import org.w3c.dom.Text;
 
 public class CalculadoraFragment  extends Fragment {
 
@@ -58,25 +61,31 @@ public class CalculadoraFragment  extends Fragment {
 
 
 
-    private void mostrarDialogoBasico( int numc, int numO, int numM){
+    private void mostrarDialogoBasico( int numc, int numO, int numM) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("RESULTADO OPTIMO DE EJERCITO: ");
-        builder.setMessage("Necesitarias: "+numc+"Jinetes"+numM+"Espadachin "+numO+"Ballesteros"+numc+"Unidad Unica")
-                .setPositiveButton("Share", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getContext(), "Datos compartidos", Toast.LENGTH_SHORT).show();
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.dialog_personalizado, null);
+        builder.setView(view);
 
-                    }
-                })
-                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getContext(), "Datos mostrados", Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
+        final AlertDialog dialog = builder.create();
+        dialog.show();
 
-                    }
-                }).show();
+        TextView txtArq= view.findViewById(R.id.cantArqueros);
+        txtArq.setText("400");
+        TextView txtAld= view.findViewById(R.id.cantAldeanos);
+        txtAld.setText("50");
+        TextView txtJin= view.findViewById(R.id.cantJinetes);
+        txtJin.setText("100");
+
+        Button btnOk = view.findViewById(R.id.btn_ok);
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Resultado mostrado", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
     }
 }
 
