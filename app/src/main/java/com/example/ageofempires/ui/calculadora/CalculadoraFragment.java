@@ -60,15 +60,21 @@ public class CalculadoraFragment  extends Fragment {
                 int uuc=30; int uuo=40; int uum=25; int uud=5;
 
                 float[][] matriz = inicializarSimplex(numC, numO, numM, uuc, uuo, uum, uud);
-                int[] vars = inicializarVariables(3);
+                int[] vars = new int[3];
+                for (int i=0; i<=2; i++) {
+                    vars[i] = 0;
+                }
                 imprimirSimplex(matriz, vars);
                 matriz = calcularSimplex(matriz, vars);
 
-                int[] ejercito = inicializarVariables(4);
+                String[] ejercito = new String[4];
+                for (int i=0; i<=3; i++) {
+                    ejercito[i] = "";
+                }
                 String mensaje = "Ejército óptimo: ";
                 for (int i=0; i<=2; i++) {
                     if (vars[i] != 0) {
-                        ejercito[vars[i]] = String.format("%.0f", Math.ceil(matriz[i][7]));
+                        ejercito[vars[i]] =  String.format("%.0f", Math.ceil(matriz[i][7]));
 
                         System.out.println("[" + i + "," + vars[i] + "] = " + matriz[i][vars[i]-1]);
                         mensaje += String.format("%.0f", Math.ceil(matriz[i][7]));
@@ -122,15 +128,7 @@ public class CalculadoraFragment  extends Fragment {
            
         return newArr;
       }
-      
-      public static int[] inicializarVariables(int n) {
-        int[] vars = new int[3];
-        for (int i=0; i<n; i++) {
-          vars[i] = 0;
-        }
-        return vars;
-      }
-      
+
       public static void imprimirSimplex(float[][] spx, int[] vars) {
         for (int i=0; i<=3; i++) {
           String renglon = "";
@@ -213,8 +211,10 @@ public class CalculadoraFragment  extends Fragment {
         return spx;
       }
 
+
+
     //Boton OK y Share - Dialog Creado
-    private void mostrarDialogo(int cantInf, int cantArq, int cantCab, int cantUU) {
+    private void mostrarDialogo(String cantInf, String cantArq, String cantCab, String cantUU) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_personalizado, null);
@@ -225,7 +225,7 @@ public class CalculadoraFragment  extends Fragment {
         final AlertDialog dialog = builder.create();
         dialog.show();
 
-        TextView txtInf= view.findViewById(R.id.cantInfanteria);
+        TextView txtInf= view.findViewById(R.id.cantAldeanos);
         txtInf.setText(cantInf);
         TextView txtArq= view.findViewById(R.id.cantArqueros);
         txtArq.setText(cantArq);
