@@ -1,16 +1,20 @@
 package com.example.ageofempires;
 
 
-import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.Menu;
+import android.view.MenuItem;
+
+import android.widget.Button;
 import android.widget.Toast;
 
 
 import com.example.ageofempires.entitys.Civilization;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static ArrayList<Civilization> listCivilization;
+    public MediaPlayer music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         loadCivilizations();
-    /*      if (listCivilization.isEmpty()){
-            Log.i("LISTA", "La Lista no se cargo");
-        }
-        else {
-            Toast.makeText(this, "Se cargaron: "+ listCivilization.size()+" Civilizaciones", Toast.LENGTH_LONG ).show();
-        }
-    */
-
-
-
+        music = MediaPlayer.create(this, R.raw.age_music);
+        music.start();
     }
 
 
@@ -68,6 +65,32 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@Nullable  MenuItem item) {
+        int idBtn = item.getItemId();
+
+
+        switch (idBtn){
+            case R.id.btnPlay :
+                if(music.isPlaying()){
+                    Toast.makeText(getApplicationContext(), "STOP", Toast.LENGTH_SHORT).show();
+                    music.stop();
+                    item.setIcon(R.drawable.ic_baseline_music_note);
+                } else {
+                    Toast.makeText(getApplicationContext(), "PLAY", Toast.LENGTH_SHORT).show();
+                    music = MediaPlayer.create(this, R.raw.age_music);
+                    music.start();
+                    item.setIcon(R.drawable.ic_baseline_music_off_24);
+                }
+                     break;
+
+            default: onSupportNavigateUp();
+        }
+
+        return true;
+    }
+
 
     @Override
     public boolean onSupportNavigateUp() {
