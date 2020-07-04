@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/dialogCompleto"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout android:id="@+id/dialogCompleto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:id="@+id/barraSuperiorId"
@@ -25,21 +27,78 @@
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
         <LinearLayout
-            android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="12dp">
 
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                android:id="@+id/cardInfanteria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imgInfanteria"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/infanteria"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/txtInfanteria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INFANTERIA"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginTop="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cantInfanteria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80"
+                            android:textSize="55dp"
+                            android:layout_marginRight="20dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardFacil"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                android:id="@+id/cardArqueros"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp">
@@ -51,7 +110,7 @@
                     android:weightSum="1">
 
                     <ImageView
-                        android:id="@+id/imgVersion"
+                        android:id="@+id/imgArqueros"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="5dp"
@@ -66,7 +125,7 @@
                         android:layout_marginLeft="15dp">
 
                         <TextView
-                            android:id="@+id/tvNombre"
+                            android:id="@+id/txtArqueros"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ARQUEROS"
@@ -91,12 +150,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardMedio"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                android:id="@+id/cardJinetes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -104,58 +165,7 @@
                     android:weightSum="1">
 
                     <ImageView
-                        android:id="@+id/imgVersion2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:src="@drawable/aldeano"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="15dp">
-
-                        <TextView
-                            android:id="@+id/tvNombre2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ALDEANOS"
-                            android:textColor="@color/colorPrimary"
-                            android:layout_marginTop="5dp"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/cantAldeanos"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="80"
-                            android:textSize="55dp"
-                            android:layout_marginRight="20dp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardFacil3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:id="@+id/imgVersion3"
+                        android:id="@+id/imgJinete"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="5dp"
@@ -170,7 +180,7 @@
                         android:layout_marginLeft="15dp">
 
                         <TextView
-                            android:id="@+id/tvNombre3"
+                            android:id="@+id/txtJinete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="JINETES"
@@ -195,6 +205,65 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                android:id="@+id/cardUnidadU"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgUnidadU"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/unidad_unica"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/txtUnidadU"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UNIDAD UNICA"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginTop="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cantUnidadU"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textSize="55dp"
+                            android:layout_marginRight="20dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
 
 
 
@@ -207,12 +276,14 @@
 
         <Button
             android:id="@+id/btn_ok"
+            android:background="@drawable/botones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OK"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btn_share"
+            android:background="@drawable/botones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SHARE"

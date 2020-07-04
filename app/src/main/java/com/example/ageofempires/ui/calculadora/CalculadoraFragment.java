@@ -50,14 +50,15 @@ public class CalculadoraFragment  extends Fragment {
         btn_calcu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer numC = Integer.parseInt(comidaET.getText().toString());
-                Integer numO = Integer.parseInt(oroET.getText().toString());
-                Integer numM = Integer.parseInt(maderaET.getText().toString());
+                Integer numC = Integer.parseInt(comidaET.getText().toString()) + 1;
+                Integer numO = Integer.parseInt(oroET.getText().toString()) + 1;
+                Integer numM = Integer.parseInt(maderaET.getText().toString()) + 1;
+
 
                 //Brillo
 
                 // valores constantes para una unidad unica generica
-                int uuc=30; int uuo=40; int uum=25; int uud=5;
+                int uuc=40; int uuo=50; int uum=0; int uud=4;
 
                 float[][] matriz = inicializarSimplex(numC, numO, numM, uuc, uuo, uum, uud);
                 int[] vars = new int[3];
@@ -73,8 +74,9 @@ public class CalculadoraFragment  extends Fragment {
                 }
                 String mensaje = "Ejército óptimo: ";
                 for (int i=0; i<=2; i++) {
+                    System.out.println("el valor de I es: "+i);
                     if (vars[i] != 0) {
-                        ejercito[vars[i]] =  String.format("%.0f", Math.ceil(matriz[i][7]));
+                        ejercito[vars[i]-1] =  String.format("%.0f", Math.ceil(matriz[i][7]));
 
                         System.out.println("[" + i + "," + vars[i] + "] = " + matriz[i][vars[i]-1]);
                         mensaje += String.format("%.0f", Math.ceil(matriz[i][7]));
@@ -225,14 +227,15 @@ public class CalculadoraFragment  extends Fragment {
         final AlertDialog dialog = builder.create();
         dialog.show();
 
-        TextView txtInf= view.findViewById(R.id.cantAldeanos);
-        txtInf.setText(cantInf);
+
         TextView txtArq= view.findViewById(R.id.cantArqueros);
         txtArq.setText(cantArq);
         TextView txtJin= view.findViewById(R.id.cantJinetes);
         txtJin.setText(cantCab);
-        //TextView txtUU= view.findViewById(R.id.cantUnidadUnica);
-        //txtUU.setText(cantUU);
+        TextView txtUU= view.findViewById(R.id.cantUnidadU);
+        txtUU.setText(cantUU);
+        TextView txtInf= view.findViewById(R.id.cantInfanteria);
+        txtInf.setText(cantInf);
 
         Button btnOk = view.findViewById(R.id.btn_ok);
         btnOk.setOnClickListener(new View.OnClickListener() {

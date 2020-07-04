@@ -9,23 +9,91 @@
 
 
     <!-- MADERA -->
+
     <TextView
         android:id="@+id/madera_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="181dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
         android:text="MADERA"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/oro_num"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:nextFocusDown="@id/comida_num"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oro" />
+
+    <TextView
+        android:id="@+id/oro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        android:text="ORO"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madera_num" />
+
+    <ImageView
+        android:id="@+id/oro_img"
+        android:layout_width="29dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_oro"
+        app:layout_constraintStart_toEndOf="@+id/oro"
+        app:layout_constraintTop_toBottomOf="@+id/madera_num" />
+
+    <ImageView
+        android:id="@+id/comida_img"
+        android:layout_width="29dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/icon_comida"
+        app:layout_constraintStart_toEndOf="@+id/comida_text"
+        app:layout_constraintTop_toBottomOf="@+id/oro_num" />
+
+    <EditText
+        android:id="@+id/comida_num"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comida_text" />
+
+    <TextView
+        android:id="@+id/comida_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="108dp"
+        android:text="COMIDA"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madera_num" />
 
     <ImageView
         android:id="@+id/madera_img"
         android:layout_width="29dp"
         android:layout_height="40dp"
-        android:layout_marginTop="181dp"
-        android:src="@drawable/recurso_madera"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="204dp"
+        android:src="@drawable/icon_madera"
         app:layout_constraintStart_toEndOf="@+id/madera_text"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,82 +101,17 @@
         android:id="@+id/madera_num"
         android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginStart="124dp"
         android:ems="10"
-        android:text="0"
         android:inputType="number"
+        android:nextFocusRight="@id/oro_num"
+        android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/madera_text"
-        android:nextFocusRight="@id/oro_num"/>
+        app:layout_constraintTop_toBottomOf="@+id/madera_text" />
 
     <!-- ORO -->
-    <ImageView
-        android:id="@+id/oro_img"
-        android:layout_width="29dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="181dp"
-        android:src="@drawable/recurso_madera"
-        app:layout_constraintStart_toEndOf="@+id/oro"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/oro"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="180dp"
-        android:text="ORO"
-        android:textSize="30dp"
-        app:layout_constraintStart_toEndOf="@+id/madera_img"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <EditText
-        android:id="@+id/oro_num"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:text="0"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/madera_num"
-        app:layout_constraintTop_toBottomOf="@+id/oro_img"
-        android:nextFocusDown="@id/comida_num"/>
 
     <!-- COMIDA -->
-    <TextView
-        android:id="@+id/comida_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="40dp"
-        android:text="COMIDA"
-        android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/madera_num" />
-
-    <ImageView
-        android:id="@+id/comida_img"
-        android:layout_width="29dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="96dp"
-        android:src="@drawable/recurso_madera"
-        app:layout_constraintStart_toEndOf="@+id/madera_text"
-        app:layout_constraintTop_toBottomOf="@+id/madera_img" />
-
-    <EditText
-        android:id="@+id/comida_num"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:text="0"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comida_text"/>
 
 
     <!-- Introduccion -->
@@ -117,23 +120,23 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="28dp"
-        android:text="Texto de como usarla"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/son_of_time"
+        android:text="Bienvenido guerrero, aquí podrás calcular tu ejercito óptimo y fuerte. ¿Cómo funciona? Solo escribe los recursos que tengas en los distintos cuadros y así podrás enfrentarte a los mejores competidores del mundo sin esfuerzo alguno!"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_calcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="448dp"
-        android:layout_marginEnd="159dp"
+        android:layout_width="400dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botones"
         android:text="CALCULAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/comida_num" />
 </androidx.constraintlayout.widget.ConstraintLayout>
